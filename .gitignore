@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.Rhistory
+*.log
+*.sqlite
+*.db
+*.csv
+*.json
+!pyproject.toml
+!*.example
+
+# Local documentation/export artifacts
+*.docx
+*.rtf
+*.pdf
+
+# Streamlit local state
+.streamlit/secrets.toml

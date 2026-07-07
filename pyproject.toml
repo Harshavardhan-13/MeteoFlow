@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-meteo-weather-etl"
+version = "0.3.0"
+description = "API-to-PostgreSQL ETL pipeline for Open-Meteo weather and air-quality data"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "httpx==0.28.1",
+  "pandas==2.3.1",
+  "psycopg[binary]==3.2.9",
+  "streamlit==1.46.1",
+]
+
+[project.scripts]
+weather-api-fetch = "weather_api.fetch:main"
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.1", "ruff==0.12.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
