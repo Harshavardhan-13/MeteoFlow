@@ -11,7 +11,7 @@ historical conditions in Streamlit.
 - PostgreSQL schema creation with constraints, indexes, and JSONB raw storage
 - Docker Compose setup for local PostgreSQL
 - Streamlit dashboard for readable weather and AQI exploration
-- Basic automated tests and GitHub Actions CI
+- Basic automated tests
 
 ## Architecture
 
@@ -248,4 +248,3 @@ python -m pip check
 - `.env.example` is committed so other users know which variables to set.
 - Python caches, virtual environments, generated package metadata, and local
   document/export files are ignored.
-- The GitHub Actions workflow runs `ruff` and `pytest` on push and pull request.
